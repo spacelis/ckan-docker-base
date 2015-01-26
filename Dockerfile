@@ -37,3 +37,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
         expect \
         expect-dev \
         build-essential
+
+# Prepare virtualenv
+RUN virtualenv $CKAN_HOME
+RUN mkdir -p $CKAN_HOME $CKAN_CONFIG $CKAN_DATA
+RUN chown www-data:www-data $CKAN_DATA
+
+ADD ./requirement.txt /etc/ckan-dp-req.txt
+RUN $CKAN_HOME/bin/pip install -r /etc/ckan-dp-req.txt
