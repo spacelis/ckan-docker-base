@@ -19,6 +19,10 @@ ENV CKAN_DATASTORE_DB datastore
 ENV CKAN_DATASTORE_READER ds_reader
 ENV CKAN_DATASTORE_WRITER ds_writer
 
+ENV CKAN_DATAPUSHER_DB datapusher
+ENV CKAN_DATAPUSHER_PASS datapusher
+ENV CKAN_DATAPUSHER datapusher
+
 # Install required packages
 RUN apt-get -q -y update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
