@@ -21,7 +21,6 @@ WebHelpers==1.3
 WebOb==1.0.8
 WebTest==1.4.3
 argparse==1.2.1
-ckanserviceprovider==0.0.2
 decorator==3.4.0
 fanstatic==0.12
 flask-admin
