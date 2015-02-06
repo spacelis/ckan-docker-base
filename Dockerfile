@@ -40,8 +40,12 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
         postgresql-client \
         expect \
         expect-dev \
-        build-essential
+        build-essential \
+        nodejs \
+        npm
 
+
+RUN npm install -g less nodewatch
 # Prepare virtualenv
 RUN virtualenv $CKAN_HOME
 RUN mkdir -p $CKAN_HOME $CKAN_CONFIG $CKAN_DATA
