@@ -42,6 +42,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
         expect \
         expect-dev \
         build-essential \
+        git \
         nodejs \
         npm
 
