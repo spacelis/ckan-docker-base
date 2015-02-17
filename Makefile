@@ -1,4 +1,4 @@
 all:
-	docker build -t spacelis/base4ckan .
+	docker build -t spacelis/ckan-docker-base .
 
 .PHONY: all
